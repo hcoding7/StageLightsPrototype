@@ -14,12 +14,13 @@ struct Cue {
     var text : String
     var subtitle: String
 }
-protocol CueCellDelegate: class {
-    func didPressButton (_ tag:Int)
-}
+
+
+
 class CueTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cueTitle: UILabel!
+  
     @IBOutlet weak var cueTimestamp: UILabel!
     @IBOutlet weak var cueInfo: UILabel!
     @IBOutlet weak var editCueButton: UIButton!
@@ -27,13 +28,14 @@ class CueTableViewCell: UITableViewCell {
 }
 class CueTableViewController: UITableViewController {
 
-   
+     var CueTitleFinal = ""
     // MARK: - Table view data source
     var cues = [
-        Cue(id: 1, title: "Lorem Ipsum", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", subtitle: "This is cell 1"),
+        Cue(id: 1, title: "\(CueTitleFinal)", text: "", subtitle: ""),
         Cue(id: 2, title: "Aenean condimentum", text: "Ut eget massa erat. Morbi mauris diam, vulputate at luctus non.", subtitle:  "This is cell 2"),
         Cue(id: 3, title: "In ac ante sapien", text: "Aliquam egestas ultricies dapibus. Nam molestie nunc." , subtitle: "This is cell 3"),
     ]
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
         return cues.count
@@ -54,5 +56,15 @@ class CueTableViewController: UITableViewController {
         return cell
     }
 
+    @IBAction func cueEdit(_ sender: Any) {
+       self.performSegue(withIdentifier: "cueDisplaytoCueChange", sender: self)
+
+    }
+    var cueEditDelegate:dataTransfer?
+    
     
 }
+
+//self.performSegue
+
+

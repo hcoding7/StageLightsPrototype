@@ -338,6 +338,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eav-of-HcX">
+                                <rect key="frame" x="101" y="47" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Back:" destination="kXi-9p-u8l" eventType="touchUpInside" id="W1K-fF-sy6"/>
+                                    <segue destination="avu-2X-ku9" kind="show" identifier="goBack" id="QCa-sL-AnI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Z17-m4-2VC"/>
@@ -396,7 +405,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                             <state key="normal" title="Edit Cue"/>
                                             <connections>
-                                                <segue destination="kXi-9p-u8l" kind="show" id="Qbn-u6-mlS"/>
+                                                <action selector="cueEdit:" destination="avu-2X-ku9" eventType="touchUpInside" id="7Fm-fY-73l"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -415,6 +424,9 @@
                             <outlet property="delegate" destination="avu-2X-ku9" id="1p4-4b-U6O"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="kXi-9p-u8l" kind="show" identifier="cueDisplaytoCueChange" id="3AG-IY-dP6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WID-L8-nmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -424,4 +436,8 @@
     <resources>
         <image name="backX" width="112.5" height="112.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3AG-IY-dP6"/>
+        <segue reference="QCa-sL-AnI"/>
+    </inferredMetricsTieBreakers>
 </document>

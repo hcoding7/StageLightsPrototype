@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D33B7EA22E6146F007E5CB8 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D33B7E922E6146F007E5CB8 /* Delegates.swift */; };
 		0D83D64322DE4B2C007DA9AF /* CueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D83D64222DE4B2C007DA9AF /* CueTableViewController.swift */; };
 		0D83D64522E0E17D007DA9AF /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D83D64422E0E17D007DA9AF /* ViewController4.swift */; };
 		0D9574CD22D8CE1B005EAE7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9574CC22D8CE1B005EAE7B /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D33B7E922E6146F007E5CB8 /* Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
 		0D83D64222DE4B2C007DA9AF /* CueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CueTableViewController.swift; path = ../CueTableViewController.swift; sourceTree = "<group>"; };
 		0D83D64422E0E17D007DA9AF /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		0D9574C922D8CE1B005EAE7B /* StageLightsPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StageLightsPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				0D9574CC22D8CE1B005EAE7B /* AppDelegate.swift */,
+				0D33B7E922E6146F007E5CB8 /* Delegates.swift */,
 				0D9574CE22D8CE1B005EAE7B /* ViewController.swift */,
 				0D83D64222DE4B2C007DA9AF /* CueTableViewController.swift */,
 				0D9574D022D8CE1B005EAE7B /* Main.storyboard */,
@@ -269,6 +272,7 @@
 				0D9574CD22D8CE1B005EAE7B /* AppDelegate.swift in Sources */,
 				0D9574FB22D8D424005EAE7B /* ViewController2.swift in Sources */,
 				0D83D64322DE4B2C007DA9AF /* CueTableViewController.swift in Sources */,
+				0D33B7EA22E6146F007E5CB8 /* Delegates.swift in Sources */,
 				0D83D64522E0E17D007DA9AF /* ViewController4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

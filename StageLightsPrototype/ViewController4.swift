@@ -15,12 +15,15 @@ class ViewController4: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
     var CueTitle = ""
     var Timestamp = ""
     @IBOutlet weak var TimestampLabel: UILabel!
     
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var cueTitleText: UITextField!
+   
     
     @IBOutlet weak var cueTimestampText: UITextField!
     @IBAction func cueTitleUpdate(_ sender: Any) {
@@ -32,4 +35,14 @@ class ViewController4: UIViewController {
        TimestampLabel.text = Timestamp
     }
     
+    @IBAction func Back(_ sender: Any) {
+        self.CueTitle = cueTitleText.text!
+        performSegue(withIdentifier: "goBack", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! CueTableViewController
+        vc.cues[title] = self.CueTitle
+    }
 }
+
+var delegate: dataTransfer?
