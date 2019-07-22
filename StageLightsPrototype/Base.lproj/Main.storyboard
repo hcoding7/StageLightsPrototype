@@ -305,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfk-LH-D6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14221.205357142857" y="-497.10144927536237"/>
+            <point key="canvasLocation" x="-13570" y="254"/>
         </scene>
         <!--Cue Table View Controller-->
         <scene sceneID="Jp3-Uj-LXo">
