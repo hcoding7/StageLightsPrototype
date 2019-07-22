@@ -15,16 +15,21 @@ class ViewController4: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    var CueTitle = ""
+    var Timestamp = ""
+    @IBOutlet weak var TimestampLabel: UILabel!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var TitleLabel: UILabel!
+    @IBOutlet weak var cueTitleText: UITextField!
+    
+    @IBOutlet weak var cueTimestampText: UITextField!
+    @IBAction func cueTitleUpdate(_ sender: Any) {
+        CueTitle = cueTitleText.text!
+        TitleLabel.text = CueTitle
     }
-    */
-
+    @IBAction func cueTimestampUpdate(_ sender: Any) {
+        Timestamp = cueTimestampText.text!
+       TimestampLabel.text = Timestamp
+    }
+    
 }
