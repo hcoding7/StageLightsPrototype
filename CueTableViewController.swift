@@ -26,14 +26,21 @@ class CueTableViewCell: UITableViewCell {
     
 }
 class CueTableViewController: UITableViewController {
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Load the sample data.
+        loadSampleCues()
+    }
    
     // MARK: - Table view data source
-    var cues = [
-        Cue(id: 1, title: "Lorem Ipsum", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", subtitle: "This is cell 1"),
-        Cue(id: 2, title: "Aenean condimentum", text: "Ut eget massa erat. Morbi mauris diam, vulputate at luctus non.", subtitle:  "This is cell 2"),
-        Cue(id: 3, title: "In ac ante sapien", text: "Aliquam egestas ultricies dapibus. Nam molestie nunc." , subtitle: "This is cell 3"),
-    ]
+    var cues = [Cue]()
+    private func loadSampleCues () {
+    let Cue1 = Cue(id: 1, title: "a", text: "d", subtitle: "g")
+        let Cue2 = Cue(id: 2, title: "b", text: "e", subtitle: "h")
+            let Cue3 = Cue(id: 3, title: "c", text: "f", subtitle: "i")
+        cues += [Cue1, Cue2, Cue3]
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
         return cues.count
